@@ -6,12 +6,14 @@
 ## 本地安装使用
 - 拉取本项目，在项目目录下执行 `./mvnw clean install`
 
+## 在自己的项目配置使用sdk及编写相应的contract服务。
+
 - 在要使用的项目pom.xml中添加依赖如下
 ```xml
 <dependency>
     <groupId>com.cnhealth.devcenter</groupId>
     <artifactId>fisco-client-starter</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.1.0</version>
 </dependency>
 ```
 
@@ -38,7 +40,7 @@ bcos.threadPool.channelProcessorThreadSize=16
 bcos.threadPool.receiptProcessorThreadSize=16
 bcos.threadPool.maxBlockingQueueSize=102400
 ```
-- 使用 `./sol2java.sh` 把写好的solidity合约转译成java类型，请参考官档。下面范例中的`BCOSLogger`就是转译后的class。
+- 使用 `./sol2java.sh` 把写好的solidity合约转译成java class，请参考官档[地址](https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/tutorial/sdk_application.html#id6)。下面范例中的`BCOSLogger`就是转译后的class。
 
 - 定义自己的合约service，为方便使用可以继承自`AbstractContractService`,下面是一个范例：
 ```java
@@ -74,4 +76,4 @@ public class BCOSLoggerService extends AbstractContractService {
 }
 ```
 
-- 接下来，就可以在需要使用的地方，直接该service的方法，来使用合约的方法。
+- 接下来，就可以在需要使用的地方，直接该service的方法，来调用使用合约。
