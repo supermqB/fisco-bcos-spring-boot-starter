@@ -11,7 +11,7 @@
     </parent>
     <groupId>com.cnhealth.devcenter</groupId>
     <artifactId>fisco-client-starter</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.1.0</version>
 
     <properties>
         <java.version>8</java.version>
@@ -29,4 +29,10 @@
         </dependency>
     </dependencies>
 
+    <distributionManagement>
+        <repository>
+            <id>cnhealth</id>
+            <url>http://nexus.cnhealth.com/repository/maven-releases/</url>
+        </repository>
+    </distributionManagement>
 </project>
