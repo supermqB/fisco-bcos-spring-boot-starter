@@ -86,4 +86,5 @@ public class BCOSLoggerService extends AbstractContractService {
 - 将keys（一般位于~/fisco/nodes/127.0.0.1/sdk）拷贝到 example/src/main/resources/conf 目录下
 - 准备好spring-boot-starter, 如果本地使用，在项目目录下执行 `./mvnw clean install`
 - 进入example，启动项目 ` ./mvnw spring-boot:run`
-- 访问 `http://localhost:8080`, 点击swagger的链接，测试接口。 
+- 访问 `http://localhost:8080`, 点击swagger的链接，测试接口。
+
