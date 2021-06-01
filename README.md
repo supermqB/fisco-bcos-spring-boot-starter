@@ -19,7 +19,7 @@
 
 - 添加properties配置，以application.properties中的配置为例
 
-  *注意，把密钥目录复制到bcos.cryptoMaterial.certPath定义的目录下*
+  *注意，把密钥目录(~/fisco/nodes/127.0.0.1/sdk)复制到bcos.cryptoMaterial.certPath定义的目录下*
 ```properties
 # indicate BCOS SDK instance is needed
 bcos.hasInstance=true
@@ -77,3 +77,14 @@ public class BCOSLoggerService extends AbstractContractService {
 ```
 
 - 接下来，就可以在需要使用的地方，直接该service的方法，来调用使用合约。
+
+## 范例应用位于example目录下
+
+该应用是保存日志摘要到链上，以供未来存证校验使用。范例提供2个接口和 /addlog /verifylog.启动方式如下：
+
+- 首先在本地安装好fisco bcos [参照](https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/installation.html)
+- 将keys（一般位于~/fisco/nodes/127.0.0.1/sdk）拷贝到 example/src/main/resources/conf 目录下
+- 准备好spring-boot-starter, 如果本地使用，在项目目录下执行 `./mvnw clean install`
+- 进入example，启动项目 ` ./mvnw spring-boot:run`
+- 访问 `http://localhost:8080`, 点击swagger的链接，测试接口。
+
